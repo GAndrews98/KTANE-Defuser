@@ -17,15 +17,39 @@ var p1 = [];
 var p2 = [];
 var p3 = [];
 
-/*
-function live_search() {
+
+function live_search(e) {
     string1 = document.getElementById('column1').value;
     string2 = document.getElementById('column2').value;
     string3 = document.getElementById('column3').value;
-    remove_password_results();
-    test(string1, 0, passwords, p1);
-    test(string2, 1, p1, p2);
-    print_the_password(p1);
+
+    //clears the arrays if needed
+    if(string1.length != 6) {
+        p1 = [];
+        remove_password_results();
+    }
+    if(string2.length != 6) {
+        p2 = [];
+        if(p1.length != 0) {
+            remove_password_results();
+            print_the_password(p1);
+        }
+    }
+    if(string3.length != 6) {
+        p3 = [];
+        if(p2.length != 0 && p1.length != 0) {
+            remove_password_results();
+            print_the_password(p2);
+        }
+    }
+
+    //fills the array if needed
+    if(p1.length === 0)
+        test(string1, 0, passwords, p1);
+    if(p2.length === 0)
+        test(string2, 1, p1, p2);
+    if(p3.length === 0)
+        test(string3, 2, p2, p3);
 }
 
 function test(string, index, check, add_array) {
@@ -37,11 +61,10 @@ function test(string, index, check, add_array) {
                 }
             }
         }
-        for(var i = 0; i < add_array.length; i++) {
-            console.log(add_array[i]);
-        }
+        remove_password_results();
+        print_the_password(add_array);
     }
-} */
+}
 
 function clear_all_password_arrays() {
     p1 = [];
@@ -119,14 +142,15 @@ function check_passwords(e) {
     }
 
     //checks if the user hits result
-    if (e.target.value === "result") {
+    if (e.target.value === "done") {
         string1 = document.getElementById('column1').value;
         string2 = document.getElementById('column2').value;
         string3 = document.getElementById('column3').value;
         if (string1.length === 6 && string2.length === 6 && string3.length === 6) {
-            remove_password_results();
-            find_password();
+            hide_passwords_module();
+            clear_password_input();
             clear_all_password_arrays();
+            remove_password_results();
             modulesSolved++;
         } else {
             alert("You may have not entered enough letters per input box, there must be 6 per box");

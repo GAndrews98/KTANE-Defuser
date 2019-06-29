@@ -9,6 +9,7 @@
     <meta name="description" content="The Modules">
     <meta name="author" content="SitePoint">
     <link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" crossorigin="anonymous">
     <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
     <link rel="stylesheet" href="style.css">
     <script src="modules.js"></script>
@@ -282,7 +283,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" value="cancel" class="modal-cancel-button">Cancel</button>
-                <button type="button" value="result" class="modal-accept-button">Result</button>
+                <button type="button" value="done" class="modal-accept-button">Done</button>
             </div>
         </div>
     </div>
@@ -346,6 +347,287 @@
             <div class="modal-footer">
                 <button type="button" value="cancel" class="modal-cancel-button">Cancel</button>
                 <button type="button" value="result" class="modal-accept-button">Done</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Complicated Wires -->
+    <div id="complicated-wires-modal" class="module-modal hidden">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h3>Complicated Wires</h3>
+                <!-- I dont think the value for this button should be result. Shouldn't it be cancel? -->
+                <button type="button" value="cancel" class="modal-close-button">&times;</button>
+            </div>
+            <div class="simple-modal-body">
+                <!-- <div></div> -->
+                <div class="complicated-options">Wire Indicators:<div></div>
+                    <label class="radio-container">Lit LED <i class="far fa-lightbulb"></i>
+                        <input type="checkbox" id="led"></input>
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container">Blue Coloring <span class="square blue"></span>
+                        <input type="checkbox" id="blue-color"></input>
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container">Red Coloring <span class="square red"></span>
+                        <input type="checkbox" id="red-color"></input>
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container">Star <i class="fas fa-star"></i>
+                        <input type="checkbox" id="star"></input>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="complicated-container">
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" value="cancel" class="modal-cancel-button">Cancel</button>
+                <button type="button" value="result" class="modal-accept-button">Check</button>
+                <button type="button" value="done" class="modal-accept-button">Done</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- wire sequence -->
+    <div id="wire-sequence-modal" class="module-modal hidden">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h3>Wire Sequence</h3>
+                <button type="button" value="cancel" class="modal-close-button">&times;</button>
+            </div>
+            <div class="simple-modal-body">
+                <div class="grid-container">
+                    <div class="wire-number">Wire Number</div>
+                    <div class="red-column">Red</div>
+                    <div class="blue-column">Blue</div>
+                    <div class="black-column">Black</div>
+                    <div class="a-connection">A</div>
+                    <div class="b-connection">B</div>
+                    <div class="c-connection">C</div>
+                    <div class="cut-wire">Cut?</div>
+                    <div class="wire1">Wire 1</div>
+                    <div class="wire2">Wire 2</div>
+                    <div class="wire3">Wire 3</div>
+                    <div class="red1"><label class="radio-container">
+                        <input type="radio" name="color" value="nowire"></input>
+                        <span class="radio-check"></span>
+                    </label></div>
+                    <div class="blue1"><label class="radio-container">
+                        <input type="radio" name="color" value="nowire"></input>
+                        <span class="radio-check"></span>
+                    </label></div>
+                    <div class="black1"><label class="radio-container">
+                        <input type="radio" name="color" value="nowire"></input>
+                        <span class="radio-check"></span>
+                    </label></div>
+                    <div class="a1"><label class="radio-container">
+                        <input type="radio" name="color" value="nowire"></input>
+                        <span class="radio-check"></span>
+                    </label></div>
+                    <div class="b1"><label class="radio-container">
+                        <input type="radio" name="color" value="nowire"></input>
+                        <span class="radio-check"></span>
+                    </label></div>
+                    <div class="c1"><label class="radio-container">
+                        <input type="radio" name="color" value="nowire"></input>
+                        <span class="radio-check"></span>
+                    </label></div>
+                    <div class="red2"><label class="radio-container">
+                        <input type="radio" name="color" value="nowire"></input>
+                        <span class="radio-check"></span>
+                    </label></div>
+                    <div class="blue2"><label class="radio-container">
+                        <input type="radio" name="color" value="nowire"></input>
+                        <span class="radio-check"></span>
+                    </label></div>
+                    <div class="black2"><label class="radio-container">
+                        <input type="radio" name="color" value="nowire"></input>
+                        <span class="radio-check"></span>
+                    </label></div>
+                    <div class="a2"><label class="radio-container">
+                        <input type="radio" name="color" value="nowire"></input>
+                        <span class="radio-check"></span>
+                    </label></div>
+                    <div class="b2"><label class="radio-container">
+                        <input type="radio" name="color" value="nowire"></input>
+                        <span class="radio-check"></span>
+                    </label></div>
+                    <div class="c2"><label class="radio-container">
+                        <input type="radio" name="color" value="nowire"></input>
+                        <span class="radio-check"></span>
+                    </label></div>
+                    <div class="red3"><label class="radio-container">
+                        <input type="radio" name="color" value="nowire"></input>
+                        <span class="radio-check"></span>
+                    </label></div>
+                    <div class="blue3"><label class="radio-container">
+                        <input type="radio" name="color" value="nowire"></input>
+                        <span class="radio-check"></span>
+                    </label></div>
+                    <div class="black3"><label class="radio-container">
+                        <input type="radio" name="color" value="nowire"></input>
+                        <span class="radio-check"></span>
+                    </label></div>
+                    <div class="a3"><label class="radio-container">
+                        <input type="radio" name="color" value="nowire"></input>
+                        <span class="radio-check"></span>
+                    </label></div>
+                    <div class="b3"><label class="radio-container">
+                        <input type="radio" name="color" value="nowire"></input>
+                        <span class="radio-check"></span>
+                    </label></div>
+                    <div class="c3"><label class="radio-container">
+                        <input type="radio" name="color" value="nowire"></input>
+                        <span class="radio-check"></span>
+                    </label></div>
+                    <div class="cut1"><label class="radio-container">
+                        <input type="radio" name="color" value="nowire"></input>
+                        <span class="radio-check"></span>
+                    </label></div>
+                    <div class="cut2"><label class="radio-container">
+                        <input type="radio" name="color" value="nowire"></input>
+                        <span class="radio-check"></span>
+                    </label></div>
+                    <div class="cut3"><label class="radio-container">
+                        <input type="radio" name="color" value="nowire"></input>
+                        <span class="radio-check"></span>
+                    </label></div>
+                </div>
+                <!-- <p>Wire 1:
+                      <label class="radio-container">No Wire
+                          <input type="radio" name="color" value="nowire"></input>
+                          <span class="radio-check"></span>
+                      </label>
+                      <label class="radio-container">Red
+                          <input type="radio" name="wire1" value="red"></input>
+                          <span class="radio-check"></span>
+                      </label>
+                      <label class="radio-container">Blue
+                          <input type="radio" name="wire1" value="blue"></input>
+                          <span class="radio-check"></span>
+                      </label>
+                      <label class="radio-container">Black
+                          <input type="radio" name="wire1" value="black"></input>
+                          <span class="radio-check"></span>
+                      </label></p>
+                  <p>Wire 2:
+                      <label class="radio-container">No Wire
+                          <input type="radio" name="color" value="nowire"></input>
+                          <span class="radio-check"></span>
+                      </label>
+                      <label class="radio-container">Red
+                          <input type="radio" name="wire2" value="red"></input>
+                          <span class="radio-check"></span>
+                      </label>
+                      <label class="radio-container">Blue
+                          <input type="radio" name="wire2" value="blue"></input>
+                          <span class="radio-check"></span>
+                      </label>
+                      <label class="radio-container">Black
+                          <input type="radio" name="wire2" value="black"></input>
+                          <span class="radio-check"></span>
+                      </label></p>
+                  <p>Wire 3:
+                      <label class="radio-container">No Wire
+                          <input type="radio" name="batteries" value="nowire"></input>
+                          <span class="radio-check"></span>
+                      </label>
+                      <label class="radio-container">Red
+                          <input type="radio" name="wire3" value="red"></input>
+                          <span class="radio-check"></span>
+                      </label>
+                      <label class="radio-container">Blue
+                          <input type="radio" name="wire3" value="blue"></input>
+                          <span class="radio-check"></span>
+                      </label>
+                      <label class="radio-container">Black
+                          <input type="radio" name="wire3" value="black"></input>
+                          <span class="radio-check"></span>
+                      </label></p> -->
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" value="cancel" class="modal-cancel-button">Cancel</button>
+            <button type="button" value="result" class="modal-accept-button">Result</button>
+        </div>
+    </div>
+    </div>
+
+    <!-- Morse Code -->
+    <div id="morse-code-modal" class="module-modal hidden">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h3>Morse Code</h3>
+                <button type="button" value="cancel" class="modal-close-button">&times;</button>
+            </div>
+            <div class="simple-modal-body">
+                <div class="simple-buttons">
+                    <button type="button" value="dot" class="simple-button dot">Dot (1)</button>
+                    <button type="button" value="dash" class="simple-button dash">Dash (2)</button>
+                </div>
+                <div class="morse-gap">
+                    <button type="button" value="gap" class="simple-button gap">Gap (0)</button>
+                </div>
+                <div class="dot-dash-container">
+
+                </div>
+                <div class="morse-code-container">
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" value="undo" class="modal-cancel-button">Undo</button>
+                <button type="button" value="cancel" class="modal-cancel-button">Cancel</button>
+                <button type="button" value="result" class="modal-accept-button">Check</button>
+                <button type="button" value="done" class="modal-accept-button">Done</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="keypads-modal" class="module-modal hidden">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h3>Keypads</h3>
+                <button type="button" value="cancel" class="modal-close-button">&times;</button>
+            </div>
+            <div class="simple-modal-body">
+                <div class="keypad-container">
+                    <button type="button" value="koppa"><img src="assets/symbols/koppa.png"></button>
+                    <button type="button" value="little_yus"><img src="assets/symbols/little_yus.png"></button>
+                    <button type="button" value="lambda"><img src="assets/symbols/lambda.png"></button>
+                    <button type="button" value="kappa"><img src="assets/symbols/kappa.png"></button>
+                    <button type="button" value="big_yus"><img src="assets/symbols/big_yus.png"></button>
+                    <button type="button" value="kai"><img src="assets/symbols/kai.png"></button>
+                    <button type="button" value="reversed_sigma"><img src="assets/symbols/reversed_sigma.png"></button>
+                    <button type="button" value="e"><img src="assets/symbols/e.png"></button>
+                    <button type="button" value="ha"><img src="assets/symbols/ha.png"></button>
+                    <button type="button" value="white_star"><img src="assets/symbols/white_star.png"></button>
+                    <button type="button" value="query"><img src="assets/symbols/query.png"></button>
+                    <button type="button" value="copyright"><img src="assets/symbols/copyright.png"></button>
+                    <button type="button" value="buttcheeks"><img src="assets/symbols/buttcheeks.png"></button>
+                    <button type="button" value="zhe"><img src="assets/symbols/zhe.png"></button>
+                    <button type="button" value="komi_dzje"><img src="assets/symbols/komi_dzje.png"></button>
+                    <button type="button" value="shima"><img src="assets/symbols/shima.png"></button>
+                    <button type="button" value="pilcrow"><img src="assets/symbols/pilcrow.png"></button>
+                    <button type="button" value="yat"><img src="assets/symbols/yat.png"></button>
+                    <button type="button" value="teh"><img src="assets/symbols/teh.png"></button>
+                    <button type="button" value="psi"><img src="assets/symbols/psi.png"></button>
+                    <button type="button" value="sigma"><img src="assets/symbols/sigma.png"></button>
+                    <button type="button" value="ksi"><img src="assets/symbols/ksi.png"></button>
+                    <button type="button" value="dark_star"><img src="assets/symbols/dark_star.png"></button>
+                    <button type="button" value="thousand"><img src="assets/symbols/thousand.png"></button>
+                    <button type="button" value="ae"><img src="assets/symbols/ae.png"></button>
+                    <button type="button" value="i"><img src="assets/symbols/i.png"></button>
+                    <button type="button" value="omega"><img src="assets/symbols/omega.png"></button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" value="undo" class="modal-undo-button">Reset</button>
+                <button type="button" value="cancel" class="modal-cancel-button">Cancel</button>
+                <button type="button" value="done" class="modal-accept-button">Done</button>
             </div>
         </div>
     </div>

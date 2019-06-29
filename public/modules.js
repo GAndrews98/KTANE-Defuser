@@ -20,13 +20,15 @@ window.onload = function() {
 
     //Passwords
     document.getElementById('passwords').addEventListener("click", display_passwords_module);
+    document.getElementById('passwords-modal').addEventListener("keyup", live_search);
     document.getElementById('passwords-modal').addEventListener("click", check_passwords);
     // document.getElementsByClassName('passwords-input')[0].addEventListener("keyup", live_search);
 
     //Morse Code
-    /*document.getElementById('morse-code').addEventListener("click", display_morse_code_module);
-    document.getElementById('morse-code-modal').addEventListener("click", check_morse_code); */
-    document.getElementById("morse-code").addEventListener("click", function() { alert("This module is not yet implemented") });
+    document.getElementById('morse-code').addEventListener("click", display_morse_code_module);
+    document.getElementById('morse-code-modal').addEventListener("click", check_morse_code);
+    document.getElementById('morse-code-modal').addEventListener("keyup", check_morse_code);
+    // document.getElementById("morse-code").addEventListener("click", function() { alert("This module is not yet implemented") });
 
     //Solved button
     document.getElementById("solved").addEventListener("click", bomb_complete);
@@ -52,13 +54,17 @@ window.onload = function() {
     document.getElementById("whos-on-first").addEventListener("click", function() { alert("This module is not yet implemented") });
 
     //Complicated wires
-    document.getElementById("complicated-wires").addEventListener("click", function() { alert("This module is not yet implemented") });
+    document.getElementById("complicated-wires").addEventListener("click", display_complicated_wires_module);
+    document.getElementById("complicated-wires-modal").addEventListener("click", run_complicated_wires);
 
     //Wire sequence
-    document.getElementById("wire-sequence").addEventListener("click", function() { alert("This module is not yet implemented") });
+    document.getElementById("wire-sequence").addEventListener("click", display_wire_sequence_module);
+    document.getElementById("wire-sequence-modal").addEventListener("click", check_sequence);
+    //function() { alert("This module is not yet implemented") });
 
     //Keypads
-    document.getElementById("keypads").addEventListener("click", function() { alert("This module is not yet implemented") });
+    document.getElementById("keypads").addEventListener("click", display_keypads_module);
+    document.getElementById("keypads-modal").addEventListener("click", hide_keypads_module);
 
     //Memory submit buttons
     document.getElementById("label-submit").addEventListener("click", function() {
@@ -115,6 +121,10 @@ function get_car() {
 
 function get_serial() {
     return document.getElementById("serial").value;
+}
+
+function get_parallel() {
+    return document.getElementById("parallel").checked;
 }
 
 function get_parity() {

@@ -584,6 +584,145 @@ h1 {
     margin-left: 25px;
 }
 
+.complicated-options {
+    display: grid;
+    padding-top: 15px;
+    width: 300px;
+}
+
+
+.complicated-options label {
+    padding-bottom: 5px;
+}
+
+.complicated-options div {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.square {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+}
+
+/* .simple-button.dot{
+    margin-right: 50px;
+}
+
+.simple-button.dash{
+    margin-right: 50px;
+} */
+
+#morse-code-modal .simple-buttons {
+    margin-right: -40px;
+}
+
+.gap {
+    margin-top: 22px;
+    margin-left: 0;
+}
+
+.morse-code-container {
+    margin-left: 90px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "wire-number red-column blue-column black-column a-connection b-connection c-connection cut-wire" "wire1 red1 blue1 black1 a1 b1 c1 cut1" "wire2 red2 blue2 black2 a2 b2 c2 cut2" "wire3 red3 blue3 black3 a3 b3 c3 cut3";
+}
+
+.wire-number { grid-area: wire-number; }
+
+.red-column { grid-area: red-column; }
+
+.blue-column { grid-area: blue-column; }
+
+.black-column { grid-area: black-column; }
+
+.a-connection { grid-area: a-connection; }
+
+.b-connection { grid-area: b-connection; }
+
+.c-connection { grid-area: c-connection; }
+
+.cut-wire { grid-area: cut-wire; }
+
+.wire1 { grid-area: wire1; }
+
+.wire2 { grid-area: wire2; }
+
+.wire3 { grid-area: wire3; }
+
+.red1 { grid-area: red1; }
+
+.blue1 { grid-area: blue1; }
+
+.black1 { grid-area: black1; }
+
+.a1 { grid-area: a1; }
+
+.b1 { grid-area: b1; }
+
+.c1 { grid-area: c1; }
+
+.red2 { grid-area: red2; }
+
+.blue2 { grid-area: blue2; }
+
+.black2 { grid-area: black2; }
+
+.a2 { grid-area: a2; }
+
+.b2 { grid-area: b2; }
+
+.c2 { grid-area: c2; }
+
+.red3 { grid-area: red3; }
+
+.blue3 { grid-area: blue3; }
+
+.black3 { grid-area: black3; }
+
+.a3 { grid-area: a3; }
+
+.b3 { grid-area: b3; }
+
+.c3 { grid-area: c3; }
+
+.cut1 { grid-area: cut1; }
+
+.cut2 { grid-area: cut2; }
+
+.cut3 { grid-area: cut3; }
+
+.keypad-container button {
+    text-decoration: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 56px;
+    height: 56px;
+}
+
+.keypad-container button:focus {
+    /* border: solid 2px #ba4423; */
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+.keypad-container button:hover {
+    outline: solid 3px #ba4423;
+    cursor: pointer;
+}
+
+.keypad-container img {
+    width: 56px;
+    height: 56px;
+}
+
 .red {
     background-color: #FE0E0A;
     color: white;

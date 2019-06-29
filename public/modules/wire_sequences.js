@@ -1,3 +1,27 @@
+function display_wire_sequence_module() {
+    document.getElementById("modal-backdrop").classList.remove("hidden");
+    document.getElementById("wire-sequence-modal").classList.remove("hidden");
+    document.getElementById("column1").focus();
+}
+
+function hide_wire_sequence_module() {
+    document.getElementById("modal-backdrop").classList.add("hidden");
+    document.getElementById("wire-sequence-modal").classList.add("hidden");
+}
+function check_sequence(e) {
+    //checks if the user hits cancel
+    if (e.target.value === "cancel") {
+        hide_wire_sequence_module();
+        //clear_password_input();
+        //clear_all_password_arrays();
+        //remove_password_results();
+    }
+
+    //check if the user hits next
+
+
+}
+
 var blueWire = 0;
 var blackWire = 0;
 var redWire = 0;
