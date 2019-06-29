@@ -63,7 +63,7 @@ window.onload = function() {
 
     //Keypads
     document.getElementById("keypads").addEventListener("click", display_keypads_module);
-    document.getElementById("keypads-modal").addEventListener("click", hide_keypads_module);
+    document.getElementById("keypads-modal").addEventListener("click", check_keypads_event);
 
     //Memory submit buttons
     document.getElementById("label-submit").addEventListener("click", function() {
