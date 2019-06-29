@@ -27,7 +27,6 @@ window.onload = function() {
     //Morse Code
     document.getElementById('morse-code').addEventListener("click", display_morse_code_module);
     document.getElementById('morse-code-modal').addEventListener("click", check_morse_code);
-    document.getElementById('morse-code-modal').addEventListener("keyup", check_morse_code);
     // document.getElementById("morse-code").addEventListener("click", function() { alert("This module is not yet implemented") });
 
     //Solved button

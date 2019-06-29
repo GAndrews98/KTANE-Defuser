@@ -1,11 +1,13 @@
 function display_morse_code_module() {
     document.getElementById("modal-backdrop").classList.remove("hidden");
     document.getElementById("morse-code-modal").classList.remove("hidden");
+    document.addEventListener("keydown", check_morse_code_key);
 }
 
 function hide_morse_code_module() {
     document.getElementById("modal-backdrop").classList.add("hidden");
     document.getElementById("morse-code-modal").classList.add("hidden");
+    document.removeEventListener("keydown", check_morse_code_key);
 }
 
 var user_morse_words = "Nothing is currently selected";
@@ -54,6 +56,22 @@ function check_morse_code(e) {
     if(e.target.value === "undo") {
         undo_dot_dash();
         remove_one_dot_dash();
+    }
+}
+
+function check_morse_code_key(e) {
+    console.log(e);
+    if (e.key == 0) {
+        check_dot_dash();
+        remove_all_morse_dot_dash();
+    }
+    if (e.key == 1) {
+        dot_dash.push("dot");
+        show_dot_dash("dot");
+    }
+    if(e.key == 2) {
+        dot_dash.push("dash");
+        show_dot_dash("dash");
     }
 }
 
