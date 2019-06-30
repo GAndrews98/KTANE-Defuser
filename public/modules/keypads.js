@@ -46,14 +46,6 @@ function not_in_keep_colum(q) {
     return true;
 }
 
-function check_symbols() {
-    if (symbols_array.length === 4) {
-        for (var i = 0; i < symbols_array.length; i++) {
-
-        }
-    }
-}
-
 function repopulate_keypads_array() {
     array_of_symbols = [
         ["koppa", "little_yus", "lambda", "kappa", "big_yus", "kai", "reversed_sigma"],
