@@ -38,18 +38,6 @@ var array_of_symbols = [
     ["shima", "e", "thousand", "ae", "psi", "i", "omega"]
 ];
 
-function check_keypads_event(e) {
-    if (e.target.value === "done") {
-        for (var i = 0; i < array_of_symbols.length; i++) {
-            for (var j = 0; j < array_of_symbols[i].length; j++) {
-                console.log(array_of_symbols[i][j]);
-            }
-        }
-    } else {
-        check_keypad_pressed(e);
-    }
-}
-
 function not_in_keep_colum(q) {
     for (var i = 0; i < keep_column.length; i++) {
         if (keep_column[i].indexOf(q) != -1)
@@ -144,19 +132,19 @@ function check_keypad_pressed(e) {
 }
 
 function show_keypad_results(word) {
-    var keypadContainer = document.getElementsByClassName("keypad-container")[0];
+    var keypadsResult = document.getElementsByClassName("keypads-result")[0];
 
-    var keypadResults = document.createElement("p");
-    keypadResults.textContent = word;
+    var keypadResults = document.createElement("img");
+    keypadResults.src = "assets/symbols/" + word + ".png";
     keypadResults.classList.add("keypad-result");
-    keypadContainer.appendChild(keypadResults);
+    keypadsResult.appendChild(keypadResults);
 }
 
 function remove_keypad_results() {
     if(document.getElementsByClassName("keypad-result")) {
-        var keypadContainer = document.getElementsByClassName("keypad-result");
-        for(var i = keypadContainer.length-1; i >= 0; i--) {
-            keypadContainer[i].remove();
+        var keypadsResult = document.getElementsByClassName("keypad-result");
+        for(var i = keypadsResult.length-1; i >= 0; i--) {
+            keypadsResult[i].remove();
         }
     }
 }

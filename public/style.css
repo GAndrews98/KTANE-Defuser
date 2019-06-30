@@ -454,6 +454,7 @@ h1 {
     color: white;
     font-size: 22px;
     padding: 20px;
+    position: relative;
 }
 
 .simple-modal-body {
@@ -721,6 +722,19 @@ h1 {
 .keypad-container img {
     width: 56px;
     height: 56px;
+}
+
+.keypads-result {
+    top: 40%;
+    left: 31%;
+    display: flex;
+    position: absolute;
+}
+
+.keypads-result img {
+    width: 56px;
+    height: 56px;
+    margin-right: 5px;
 }
 
 .red {
