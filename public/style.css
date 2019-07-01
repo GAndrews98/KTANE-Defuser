@@ -737,6 +737,22 @@ h1 {
     margin-right: 5px;
 }
 
+.whos-on-first-result {
+    /* margin-left: 125px; */
+    text-align: center;
+}
+
+.whos-on-first-result p {
+    display: flex;
+    margin-bottom: 0;
+}
+
+.whos-on-first-result img {
+    margin-top: 0;
+    width: 100px;
+    height: 82px;
+}
+
 .red {
     background-color: #FE0E0A;
     color: white;
