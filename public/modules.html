@@ -587,6 +587,7 @@
         </div>
     </div>
 
+    <!-- Keypads -->
     <div id="keypads-modal" class="module-modal hidden">
         <div class="modal-dialog">
             <div class="modal-header">
@@ -629,6 +630,30 @@
             </div>
             <div class="modal-footer">
                 <button type="button" value="undo" class="modal-undo-button">Reset</button>
+                <button type="button" value="cancel" class="modal-cancel-button">Cancel</button>
+                <button type="button" value="done" class="modal-accept-button">Done</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="whos-on-first-modal" class="module-modal hidden">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h3>Whos on First</h3>
+                <button type="button" value="cancel" class="modal-close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="display-input">
+                    <p>Display Word: </p>
+                    <input type="text" id="whos-on-first-display">
+                    <button type="button" class="simple-button ktane-red" id="display-submit" value="display-submit">Submit</button>
+                </div>
+                <div class="whos-on-first-result">
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <!-- <button type="button" value="undo" class="modal-undo-button">Reset</button> -->
                 <button type="button" value="cancel" class="modal-cancel-button">Cancel</button>
                 <button type="button" value="done" class="modal-accept-button">Done</button>
             </div>

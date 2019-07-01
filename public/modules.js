@@ -50,7 +50,9 @@ window.onload = function() {
     document.getElementById("mazes").addEventListener("click", function() { alert("This module is not yet implemented") });
 
     //Whos on first
-    document.getElementById("whos-on-first").addEventListener("click", function() { alert("This module is not yet implemented") });
+    document.getElementById("whos-on-first").addEventListener("click", display_whos_on_first_module);
+    document.getElementById("whos-on-first-modal").addEventListener("click", start_whos_on_first);
+    // document.getElementById("whos-on-first").addEventListener("click", function() { alert("This module is not yet implemented") });
 
     //Complicated wires
     document.getElementById("complicated-wires").addEventListener("click", display_complicated_wires_module);
