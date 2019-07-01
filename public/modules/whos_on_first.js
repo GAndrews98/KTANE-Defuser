@@ -70,6 +70,7 @@ function start_whos_on_first(e) {
     if(e.target.value === "cancel") {
         wof_counter = true;
         document.getElementById("whos-on-first-display").value = "";
+        change_input_text("Display word");
         remove_wof_results();
         hide_whos_on_first_module();
     }
@@ -77,6 +78,7 @@ function start_whos_on_first(e) {
         modulesSolved++;
         wof_counter = true;
         document.getElementById("whos-on-first-display").value = "";
+        change_input_text("Display word");
         remove_wof_results();
         hide_whos_on_first_module();
     }
@@ -97,26 +99,27 @@ function check_wof_key(e) {
 function find_img() {
     if (wof_display === "ur") {
         //top left;
-        show_whos_results("top_left");
+        show_whos_results("Top left");
     } else if (wof_display === "first" || wof_display === "okay" || wof_display === "c") {
         //top right;
-        show_whos_results("top_right");
+        show_whos_results("Top right");
     } else if (wof_display === "yes" || wof_display === "nothing" || wof_display === "led" || wof_display === "they are") {
         //middle left;
-        show_whos_results("middle_left");
+        show_whos_results("Middle left");
     } else if (wof_display === "blank" || wof_display === "read" || wof_display === "red" || wof_display === "you" || wof_display === "your" || wof_display === "you're" || wof_display === "their") {
         //middle right;
-        show_whos_results("middle_right");
+        show_whos_results("Middle right");
     } else if (wof_display === "" || wof_display === "reed" || wof_display === "leed" || wof_display === "they're") {
         //bottem left;
-        show_whos_results("bottom_left");
+        show_whos_results("Bottom left");
     } else if (wof_display === "display" || wof_display === "says" || wof_display === "no" || wof_display === "lead" || wof_display === "hold on" || wof_display === "you are" || wof_display === "there" || wof_display === "see" || wof_display === "cee") {
         //bottem right;
-        show_whos_results("bottom_right");
+        show_whos_results("Bottom right");
     }
 }
 function find_array() {
     remove_wof_results();
+    change_input_text("Display word");
     var wofResultContainer = document.getElementsByClassName('whos-on-first-result')[0];
 
     var wofResultWord = document.createElement("p");
@@ -142,6 +145,7 @@ function find_array() {
 
 function show_whos_results(word) {
     remove_wof_results();
+    change_input_text(word);
     var wofResultContainer = document.getElementsByClassName('whos-on-first-result')[0];
 
     var wofResultWord = document.createElement("p");
@@ -155,4 +159,9 @@ function show_whos_results(word) {
     wofResultContainer.appendChild(wofResultImg);
     document.getElementById("whos-on-first-display").value = "";
     document.getElementById("whos-on-first-display").focus();
+}
+
+function change_input_text(word) {
+    var inputText = document.getElementById('input-text');
+    inputText.textContent = word + ":";
 }
