@@ -47,7 +47,8 @@ window.onload = function() {
     document.getElementById("memory-modal").addEventListener("click", run_stages);
 
     //Maze
-    document.getElementById("mazes").addEventListener("click", function() { alert("This module is not yet implemented") });
+    document.getElementById("mazes").addEventListener("click", display_maze_module);
+    // document.getElementById("mazes").addEventListener("click", function() { alert("This module is not yet implemented") });
 
     //Whos on first
     document.getElementById("whos-on-first").addEventListener("click", display_whos_on_first_module);
