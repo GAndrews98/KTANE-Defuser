@@ -27,7 +27,6 @@ window.onload = function() {
     //Morse Code
     document.getElementById('morse-code').addEventListener("click", display_morse_code_module);
     document.getElementById('morse-code-modal').addEventListener("click", check_morse_code);
-    document.getElementById('morse-code-modal').addEventListener("keyup", check_morse_code);
     // document.getElementById("morse-code").addEventListener("click", function() { alert("This module is not yet implemented") });
 
     //Solved button
@@ -48,10 +47,13 @@ window.onload = function() {
     document.getElementById("memory-modal").addEventListener("click", run_stages);
 
     //Maze
-    document.getElementById("mazes").addEventListener("click", function() { alert("This module is not yet implemented") });
+    document.getElementById("mazes").addEventListener("click", display_maze_module);
+    document.getElementById("maze-modal").addEventListener("click", check_mazes);
 
     //Whos on first
-    document.getElementById("whos-on-first").addEventListener("click", function() { alert("This module is not yet implemented") });
+    document.getElementById("whos-on-first").addEventListener("click", display_whos_on_first_module);
+    document.getElementById("whos-on-first-modal").addEventListener("click", start_whos_on_first);
+    // document.getElementById("whos-on-first").addEventListener("click", function() { alert("This module is not yet implemented") });
 
     //Complicated wires
     document.getElementById("complicated-wires").addEventListener("click", display_complicated_wires_module);
@@ -64,7 +66,7 @@ window.onload = function() {
 
     //Keypads
     document.getElementById("keypads").addEventListener("click", display_keypads_module);
-    document.getElementById("keypads-modal").addEventListener("click", hide_keypads_module);
+    document.getElementById("keypads-modal").addEventListener("click", check_keypad_pressed);
 
     //Memory submit buttons
     document.getElementById("label-submit").addEventListener("click", function() {

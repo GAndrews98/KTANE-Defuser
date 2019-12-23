@@ -454,6 +454,7 @@ h1 {
     color: white;
     font-size: 22px;
     padding: 20px;
+    position: relative;
 }
 
 .simple-modal-body {
@@ -721,6 +722,73 @@ h1 {
 .keypad-container img {
     width: 56px;
     height: 56px;
+}
+
+.keypads-result {
+    top: 40%;
+    left: 31%;
+    display: flex;
+    position: absolute;
+}
+
+.keypads-result img {
+    width: 56px;
+    height: 56px;
+    margin-right: 5px;
+}
+
+.maze-prompt {
+    margin-top: 0px;
+    width: 300px
+}
+
+.maze-row {
+    display: flex;
+    margin-bottom: 18px;
+    margin-right: 0;
+    width: 300px;
+}
+
+.maze-body p {
+    padding: 0;
+    padding-right: 5px;
+    margin: 0;
+}
+
+.maze-body pre {
+    padding-bottom: 0;
+    margin-bottom: 6px;
+}
+
+.maze-row .radio-container {
+    padding-right: 0;
+    margin-left: 3px;
+}
+
+.maze-container {
+    position: absolute;
+    overflow-wrap: default;
+    /* text-align: center; */
+    color: white;
+    width: 250px;
+    top: 20%;
+    left: 50%;
+}
+
+.whos-on-first-result {
+    /* margin-left: 125px; */
+    text-align: center;
+}
+
+.whos-on-first-result p {
+    display: flex;
+    margin-bottom: 0;
+}
+
+.whos-on-first-result img {
+    margin-top: 0;
+    width: 100px;
+    height: 82px;
 }
 
 .red {
