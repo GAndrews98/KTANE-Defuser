@@ -48,7 +48,7 @@ window.onload = function() {
 
     //Maze
     document.getElementById("mazes").addEventListener("click", display_maze_module);
-    // document.getElementById("mazes").addEventListener("click", function() { alert("This module is not yet implemented") });
+    document.getElementById("maze-modal").addEventListener("click", check_mazes);
 
     //Whos on first
     document.getElementById("whos-on-first").addEventListener("click", display_whos_on_first_module);

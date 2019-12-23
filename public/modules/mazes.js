@@ -10,6 +10,22 @@ function hide_maze_module() {
     document.getElementById("maze-modal").classList.add("hidden");
 }
 
+function check_mazes(e) {
+    //Check if the cancel button or the X was pressed
+    if (e.target.value === "cancel") {
+        hide_maze_module();
+    }
+
+    //Check of the undo button was pressed
+    if (e.target.value === "undo") {
+
+    }
+
+    if (e.target.value === "done") {
+        hide_maze_module();
+    }
+}
+
 //Class node that holds each data
 // class Node {
 //     constructor(up, right, down, left, circle, startingNode, endingNode, checked, coordinates, connected) {
